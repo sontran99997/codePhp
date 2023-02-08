@@ -41,6 +41,8 @@ Route::post('/tuyen-sinh-post',[Bai03Controller::class,'xulytuyensinh']);
 //mo view nhap lieu
 Route::get('/add-cate',[CateController::class,'addcate']);
 
-Route::get('/list-cate',[CateController::class,'listcate']);
+//Route::get('/list-cate',[CateController::class,'listcate']);
 //xu ly khi nhan nut them moi
 Route::post('/add-cate-post',[CateController::class,'addcatepost']);
+
+Route::get('/list-cate',[CateController::class,'index']);

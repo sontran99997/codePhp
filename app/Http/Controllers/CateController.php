@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 //use DB;
 
 class CateController extends Controller
@@ -35,5 +36,9 @@ class CateController extends Controller
             ->get();
         return view('admin.listcate')->with('ds',$query);
         
+    }
+    public function index(){
+        $cate = Category::all();
+        return view("admin.listcate")->with('ds',$cate);
     }
 }
